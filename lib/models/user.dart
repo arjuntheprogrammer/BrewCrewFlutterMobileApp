@@ -10,5 +10,5 @@ class UserData {
   final String sugars;
   final String strength;
 
-  UserData(this.uid, this.name, this.sugars, this.strength);
+  UserData({this.uid, this.name, this.sugars, this.strength});
 }
