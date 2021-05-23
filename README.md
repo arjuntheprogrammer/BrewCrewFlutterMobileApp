@@ -25,6 +25,14 @@ samples, guidance on mobile development, and a full API reference.
 3. You can process a stream using either await for or listen() from the Stream API.
 4. There are two kinds of streams: single subscription or broadcast.
 
+## Stream Builder
+
+1. StreamBuilder is a Widget that can convert a stream of user defined objects, to widgets.
+2. This takes two arguments:
+   1. A stream
+   2. A builder, that can convert the elements of the stream to widgets
+3. Widget that builds itself based on the latest snapshot of interaction with a Stream.
+
 ## Provider
 
 1. You can use it to provide a value (usually a data model object) to anywhere in the widget tree.
