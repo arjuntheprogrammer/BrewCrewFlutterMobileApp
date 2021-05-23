@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
   final Function toggleView;
-
   SignIn({this.toggleView});
 
   @override
@@ -34,9 +33,10 @@ class _SignInState extends State<SignIn> {
               title: Text('Sign in to Brew Crew'),
               actions: <Widget>[
                 TextButton.icon(
-                    onPressed: () => widget.toggleView(),
-                    icon: Icon(Icons.person),
-                    label: Text('Register'))
+                  icon: Icon(Icons.person),
+                  label: Text('Register'),
+                  onPressed: () => widget.toggleView(),
+                )
               ],
             ),
             body: Container(
@@ -70,9 +70,7 @@ class _SignInState extends State<SignIn> {
                         setState(() => password = val);
                       },
                     ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
+                    SizedBox(height: 20.0),
                     ElevatedButton(
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
@@ -90,14 +88,12 @@ class _SignInState extends State<SignIn> {
                               setState(() {
                                 loading = false;
                                 error =
-                                    "Could not sign in with those Credentials";
+                                    'Could not sign in with those Credentials';
                               });
                             }
                           }
                         }),
-                    SizedBox(
-                      height: 12.0,
-                    ),
+                    SizedBox(height: 12.0),
                     Text(
                       error,
                       style: TextStyle(color: Colors.red, fontSize: 14.0),

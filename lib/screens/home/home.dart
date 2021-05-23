@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
     }
 
     return StreamProvider<List<Brew>>.value(
-      initialData: [],
+      initialData: null,
       value: DatabaseService().brews,
       child: Scaffold(
         appBar: AppBar(
@@ -44,6 +44,14 @@ class Home extends StatelessWidget {
               onPressed: () => _showSettingsPanel(),
             ),
           ],
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('assets/coffee_bg.png'),
+            fit: BoxFit.cover,
+          )),
+          child: BrewList(),
         ),
       ),
     );
