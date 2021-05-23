@@ -37,11 +37,13 @@ class Home extends StatelessWidget {
               onPressed: () async {
                 await _auth.signOut();
               },
+              style: TextButton.styleFrom(primary: Colors.brown[900]),
             ),
             TextButton.icon(
               icon: Icon(Icons.settings),
               label: Text('Settings'),
               onPressed: () => _showSettingsPanel(),
+              style: TextButton.styleFrom(primary: Colors.brown[900]),
             ),
           ],
         ),
