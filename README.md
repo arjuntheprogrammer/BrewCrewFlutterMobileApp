@@ -21,7 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 
 1. A source of asynchronous data events.
 2. You listen on a stream to make it start generating events,
-and to set up listeners that receive the events.
+   and to set up listeners that receive the events.
 3. You can process a stream using either await for or listen() from the Stream API.
 4. There are two kinds of streams: single subscription or broadcast.
 
@@ -29,5 +29,11 @@ and to set up listeners that receive the events.
 
 1. You can use it to provide a value (usually a data model object) to anywhere in the widget tree.
 2. However, it won't help you update the widget tree when that value changes.
+
+## GlobalKey
+
+1. A key that is unique across the entire app.
+2. Global keys uniquely identify elements. Global keys provide access to other objects that are associated with those elements, such as BuildContext. For StatefulWidgets, global keys also provide access to State.
+3. GlobalKeys have two uses: they allow widgets to change parents anywhere in your app without losing state, or they can be used to access information about another widget in a completely different part of the widget tree.
 
 ---
